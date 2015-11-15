@@ -1,0 +1,10 @@
+extends layouts/main
+
+block main_content
+  article
+    header
+      h1= article.title
+    div!=articleText.text
+
+block aside_content
+  div Aside content

@@ -1,7 +1,7 @@
 {
   "home": "/",
-  "article": "/article/${0}",
-  "category": "/${0}",
+  "article": "/article/${0}.html",
+  "category": "/${0}/",
   "assets": {
     "css": {
       "main": "/main.min.css"
