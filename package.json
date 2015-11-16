@@ -5,7 +5,8 @@
   "main": "./lib/app.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha",
-    "start": "node ./lib/app.js"
+    "start": "node ./lib/app.js",
+    "gulp": "gulp --gulpfile lib/assets/gulpfile.js"
   },
   "repository": {
     "type": "git",
@@ -26,11 +27,24 @@
     "body-parser": "^1.14.1",
     "dotenv": "^1.2.0",
     "express": "^4.13.3",
+    "i18n": "^0.5.0",
     "jade": "^1.11.0",
     "lodash": "^3.10.1",
     "method-override": "^2.3.5",
     "morgan": "^1.6.1",
     "response-time": "^2.3.1",
     "urlset": "^0.4.2"
+  },
+  "devDependencies": {
+    "bootstrap": "3.3.5",
+    "del": "^2.1.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-less": "^3.0.5",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-rev-all": "^0.8.22",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.1"
   }
 }

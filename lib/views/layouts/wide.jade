@@ -1,0 +1,8 @@
+extends root
+include _lists
+
+block content
+  if (contentTitle)
+    h1#content-title
+      span= contentTitle
+  block main_content

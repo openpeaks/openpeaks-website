@@ -9,3 +9,4 @@ docs
 node_modules
 npm-debug.log
 *.tgz
+lib/public/assets

@@ -1,0 +1,53 @@
+article {
+    font-size: 16px;
+}
+
+table.article-table {
+    max-width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border: 1px solid #eee;
+    margin: 20px auto;
+    font-size: 90%;
+    th,
+    td {
+        padding: 5px 12px;
+    }
+    thead tr {
+        border-bottom: 1px solid #cbcbcb;
+        background-color: #f3f3f3;
+    }
+    tr {
+        border-bottom: 1px solid #dfdfdf;
+    }
+}
+
+.cell-no {
+    text-align: right;
+}
+
+.cell-txt {
+    text-align: left;
+}
+
+.chart-line {
+    height: 200px;
+}
+
+article {
+    .ct-series-a .ct-bar,
+    .ct-series-a .ct-line,
+    .ct-series-a .ct-point,
+    .ct-series-a .ct-slice-donut {
+        stroke: @brand-primary
+    }
+    .ct-series-a .ct-area,
+    .ct-series-a .ct-slice-pie {
+        fill: lighten(@brand-primary, 20%)
+    }
+    p a{
+    	color: @brand-primary;
+    	text-decoration: underline;
+    }
+}

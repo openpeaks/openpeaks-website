@@ -9,7 +9,7 @@ html(lang='en')
       meta(name='description', content=site.head.description)
     if (site.head.keywords)
       meta(name='keywords', content=site.head.keywords)
-    //- link(type='text/css', rel='stylesheet', href=links.assets.css.main({v: project.version}))
+    link(type='text/css', rel='stylesheet', href=links.assets.css.main())
     block styles
     if (site.head.canonical)
       link(rel='canonical', href=site.head.canonical)
@@ -18,57 +18,21 @@ html(lang='en')
     #page
       .container
         #page-header.clearfix
-          nav.navbar.navbar-default
-            .container-fluid
-              .navbar-header
-                button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
-                  span.sr-only Toggle navigation
-                  span.icon-bar
-                  span.icon-bar
-                  span.icon-bar
-                a.navbar-brand(href=links.home(), title=project.name)
-              //- #navbar.navbar-collapse.collapse
-              //-   ul.nav.navbar-nav
-              //-     li.active
-              //-       a(href='#') Home
-              //-     li
-              //-       a(href='#') About
-              //-     li
-              //-       a(href='#') Contact
-              //-     li.dropdown
-              //-       a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-              //-         | Dropdown 
-              //-         span.caret
-              //-       ul.dropdown-menu
-              //-         li
-              //-           a(href='#') Action
-              //-         li
-              //-           a(href='#') Another action
-              //-         li
-              //-           a(href='#') Something else here
-              //-         li.divider(role='separator')
-              //-         li.dropdown-header Nav header
-              //-         li
-              //-           a(href='#') Separated link
-              //-         li
-              //-           a(href='#') One more separated link
-              //-   ul.nav.navbar-nav.navbar-right
-              //-     li.active
-              //-       a(href='./')
-              //-         | Default 
-              //-         span.sr-only (current)
-              //-     li
-              //-       a(href='../navbar-static-top/') Static top
-              //-     li
-              //-       a(href='../navbar-fixed-top/') Fixed top
-              // /.nav-collapse
-            // /.container-fluid
+          .row
+            .col-xs-5.col-sm-4.col-md-2
+              a#page-logo(href=links.home(), title=project.name) Open
+                strong peaks
+            .col-xs-5.col-sm-8.col-md-7
+              ul#page-menu
+                each item in pageMenu
+                  li
+                    a(class=item.cssClass, href=item.href)= item.text
+            .hidden-xs.hidden-sm.col-md-3
         #page-content.clearfix
           block content
         #page-footer.clearfix
           a(href='https://github.com/entipic', target='_blank') Source Code on Github
 
 
-    script(type='text/javascript', src='//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
-    //- script(type='text/javascript', src=links.assets.js.main({v: project.version}))
+    script(type='text/javascript', src=links.assets.js.main())
     block scripts

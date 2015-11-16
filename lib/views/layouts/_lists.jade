@@ -1,0 +1,17 @@
+mixin articleListMain(list, columns)
+  ul.article-list.view-main
+    each item in list
+      - var url = links.article(item.slug)
+      li.article-item(class=('cols-'+(columns||2)))
+        .item-inner
+          h3.al-t
+            a(href=url)=item.title
+          p.al-d=item.headline
+          
+mixin articleListSmall(list, itemClass)
+  ul.article-list.view-small
+    each item in list
+      - var url = links.article(item.slug)
+      li.article-item
+        .item-inner
+          a.al-t(href=url)=item.title

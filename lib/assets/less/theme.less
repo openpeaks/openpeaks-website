@@ -1,0 +1,52 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body {
+    color: rgba(0, 0, 0, 0.8);
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1000px;
+}
+
+#page-header {
+    margin: 20px 0px;
+    height: 50px;
+}
+
+#page-logo {
+    display: inline-block;
+    padding: 5px 14px;
+    margin-top: 10px;
+    background-color: @brand-primary;
+    font-size: 120%;
+    line-height: 22px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+#page-menu {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 18px;
+    margin-top: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 40px;
+    >li {
+        display: inline-block;
+        float: left;
+        margin: 5px;
+        >a {
+            display: inline-block;
+            padding: 5px;
+        }
+    }
+}
+
+#page-footer {
+    padding: 15px 0px;
+    font-size: 95%;
+}

@@ -1,13 +1,13 @@
 {
   "home": "/",
   "article": "/article/${0}.html",
-  "category": "/${0}/",
+  "category": "/${0}",
   "assets": {
     "css": {
-      "main": "/main.min.css"
+      "main": "/main.css"
     },
     "js": {
-      "main": "/main.min.js"
+      "main": "/main.js"
     }
   }
 }
