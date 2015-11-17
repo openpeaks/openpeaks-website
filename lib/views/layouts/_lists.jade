@@ -8,9 +8,9 @@ mixin articleListMain(list, columns)
             img.al-img(src=util.imageSrc(item.imageId, 'medium'))
           h3.al-t
             a(href=url)=item.title
+          p.al-d=item.headline
           ul.al-stats
             li.al-views= item.countViews
-          p.al-d=item.headline
           
 mixin articleListSmall(list, itemClass)
   ul.article-list.view-small
