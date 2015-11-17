@@ -2,6 +2,7 @@
   "home": "/",
   "article": "/article/${0}.html",
   "category": "/${0}",
+  "country": "/country/${0}",
   "assets": {
     "css": {
       "main": "/main.css"

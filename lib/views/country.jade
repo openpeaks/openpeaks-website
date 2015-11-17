@@ -1,0 +1,22 @@
+extends layouts/main
+
+block main_content
+  .row
+    .col-xs-4
+      #country-pic
+        img(src=entipicUrl(country.name.common, 'd', 'en', 'us'), alt=topicName(country, lang))
+    .col-xs-8
+      h1=topicName(country, lang)
+
+  h2#content-title
+    span= __('latest_articles')
+
+  +articleListMain(valueArticles)
+
+
+block aside_content_top
+  if (topArticles && topArticles.length>0)
+    .tab
+      h3.tab-title= __('top_articles')
+      .tab-content
+        +articleListSmall(topArticles)

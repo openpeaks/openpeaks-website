@@ -1,5 +1,5 @@
 doctype html
-html(lang='en')
+html(lang=lang)
   head
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
@@ -20,7 +20,7 @@ html(lang='en')
         #page-header.clearfix
           .row
             .col-xs-5.col-sm-4.col-md-2
-              a#page-logo(href=links.home(), title=project.name) Open
+              a#page-logo(href=links.home({lang: lang}), title=project.name) Open
                 strong peaks
             .col-xs-5.col-sm-8.col-md-7
               ul#page-menu
@@ -35,4 +35,10 @@ html(lang='en')
 
 
     script(type='text/javascript', src=links.assets.js.main())
+    if (actionUrl)
+      script.
+        (function() {
+          var img = new Image();
+          img.src = '#{actionUrl}';
+        })();
     block scripts

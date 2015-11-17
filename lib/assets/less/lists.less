@@ -1,16 +1,17 @@
 .article-list {
     list-style: none;
-    font-size: 0;
-    line-height: 0;
-    margin: 0 0 0 -50px;
     padding: 0px;
+    &.view-main {
+        margin: 0 0 0 -50px;
+    }
 }
 
-.article-item {
+
+/** main view **/
+
+.main-item {
     display: inline-block;
     vertical-align: top;
-    font-size: 14px;
-    line-height: normal;
     margin: 0 0 25px 0px;
     &.cols-2 {
         width: 50%;
@@ -20,6 +21,49 @@
     }
 }
 
-.item-inner {
+.main-inner {
     margin-left: 50px;
+}
+
+.al-img {}
+
+.fine-image {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0 0 56.25%;
+    overflow: hidden;
+    border-radius: @border-radius;
+    img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border: 0;
+        background-color: #eee;
+    }
+}
+
+
+/** small view **/
+
+.small-item {
+    list-style: none;
+    padding: 0 0 30px;
+}
+
+.small-img {
+    float: left;
+    margin: 0 27px 0 0;
+    img {
+        border-radius: @border-radius;
+        display: block;
+        width: 70px;
+        height: 70px;
+    }
+}
+
+.small-inner {
+    overflow: hidden;
 }

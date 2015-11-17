@@ -1,17 +1,26 @@
 mixin articleListMain(list, columns)
   ul.article-list.view-main
     each item in list
-      - var url = links.article(item.slug)
-      li.article-item(class=('cols-'+(columns||2)))
-        .item-inner
+      - var url = links.article(item.slug, {lang: lang})
+      li.main-item(class=('cols-'+(columns||2)))
+        .main-inner
+          a.fine-image(href=url)
+            img.al-img(src=util.imageSrc(item.imageId, 'medium'))
           h3.al-t
             a(href=url)=item.title
+          ul.al-stats
+            li.al-views= item.countViews
           p.al-d=item.headline
           
 mixin articleListSmall(list, itemClass)
   ul.article-list.view-small
     each item in list
-      - var url = links.article(item.slug)
-      li.article-item
-        .item-inner
-          a.al-t(href=url)=item.title
+      - var url = links.article(item.slug, {lang: lang})
+      li.small-item
+        a.small-img(href=url)
+          img(src=util.imageSrc(item.imageId, 'square'))
+        .small-inner
+          p
+            a.al-t(href=url)=item.title
+          ul.al-stats
+            li.al-views= item.countViews
