@@ -4,5 +4,6 @@
 	"latest_articles": "latest_articles",
 	"popular": "popular",
 	"page_title_by_category": "page_title_by_category",
-	"page_description_by_category": "page_description_by_category"
+	"page_description_by_category": "page_description_by_category",
+	"latest_tops": "latest_tops"
 }

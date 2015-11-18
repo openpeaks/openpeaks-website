@@ -2,10 +2,10 @@ extends layouts/main
 
 block main_content
   .row
-    .col-xs-4
+    .col-xs-3
       #country-pic
         img(src=entipicUrl(country.name.common, 'd', 'en', 'us'), alt=topicName(country, lang))
-    .col-xs-8
+    .col-xs-9
       h1=topicName(country, lang)
 
   h2#content-title
