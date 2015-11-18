@@ -52,8 +52,6 @@ html(lang=lang)
                   span= __('about_us')
                 p= __('about_us_info')
 
-
-    script(type='text/javascript', src=links.assets.js.main())
     if (actionUrl)
       script.
         (function(){var img = new Image();img.src = '#{actionUrl}';})();

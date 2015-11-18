@@ -9,5 +9,6 @@ block main_content
       h1(itemprop="headline")= article.title
     div!=articleText.text
 
-//- block scripts
-//-   +articleJsonLd(article, articleText)
+block scripts
+  //- +articleJsonLd(article, articleText)
+  script(type='text/javascript', src=links.assets.js.main())

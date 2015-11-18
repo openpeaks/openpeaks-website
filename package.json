@@ -6,7 +6,8 @@
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha",
     "start": "node ./lib/app.js",
-    "gulp": "gulp --gulpfile lib/assets/gulpfile.js"
+    "gulp": "gulp --gulpfile lib/assets/gulpfile.js",
+    "build": "gulp --gulpfile lib/assets/gulpfile.js"
   },
   "repository": {
     "type": "git",
