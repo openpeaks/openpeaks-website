@@ -1,8 +1,7 @@
 extends root
-include _lists
 
 block content
   if (contentTitle)
-    h1#content-title
+    h1#content-title.line-header
       span= contentTitle
   block main_content

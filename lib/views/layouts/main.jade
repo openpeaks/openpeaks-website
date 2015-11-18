@@ -1,11 +1,10 @@
 extends root
-include _lists
 
 block content
   .row
     section.col-xs-12.col-sm-8
       if (contentTitle)
-        h1#content-title
+        h1#content-title.line-header
           span= contentTitle
       block main_content
 

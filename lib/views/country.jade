@@ -8,7 +8,7 @@ block main_content
     .col-xs-9
       h1=topicName(country, lang)
 
-  h2#content-title
+  h2#content-title.line-header
     span= __('latest_articles')
 
   +articleListMain(valueArticles)

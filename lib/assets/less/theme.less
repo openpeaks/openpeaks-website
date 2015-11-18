@@ -52,15 +52,17 @@ body {
 }
 
 #content-title {
-    position: relative;
     min-height: 42px;
+}
+
+.line-header {
+    position: relative;
     &:before {
         content: '';
         display: block;
         position: absolute;
         left: 0px;
         right: 30px;
-        top: 22px;
         height: 1px;
         background: #eee;
     }
@@ -69,7 +71,6 @@ body {
         display: block;
         position: absolute;
         right: 0;
-        top: 18px;
         width: 8px;
         height: 8px;
         overflow: hidden;
@@ -81,6 +82,30 @@ body {
         display: inline-block;
         padding-right: 20px;
         position: relative;
+    }
+}
+h1.line-header {
+    &:before {
+        top: 22px;
+    }
+    &:after {
+        top: 18px;
+    }
+}
+h2.line-header {
+    &:before {
+        top: 18px;
+    }
+    &:after {
+        top: 14px;
+    }
+}
+h4.line-header {
+    &:before {
+        top: 10px;
+    }
+    &:after {
+        top: 6px;
     }
 }
 

@@ -1,3 +1,6 @@
+include _lists
+include _helpers
+
 doctype html
 html(lang=lang)
   head
@@ -9,6 +12,7 @@ html(lang=lang)
       meta(name='description', content=site.head.description)
     if (site.head.keywords)
       meta(name='keywords', content=site.head.keywords)
+    block metas
     link(type='text/css', rel='stylesheet', href=links.assets.css.main())
     block styles
     if (site.head.canonical)
@@ -31,7 +35,22 @@ html(lang=lang)
         #page-content.clearfix
           block content
         #page-footer.clearfix
-          //- a(href='https://github.com/entipic', target='_blank') Source Code on Github
+          .row
+            .col-xs-12.col-sm-6
+              .list-set
+                h4.list-title.line-header
+                  span= __('project_languages')
+                ul.list-items
+                  each item in project.languages
+                    li(class=(lang===item.alpha2?'active':null))
+                      a(href=links.home({lang: item.alpha2}))= item.name
+                  li
+                      a(rel='nofollow' href='http://github.com/openpeaks/openpeaks-articles')= __('add_your_language')
+
+            .col-xs-12.col-sm-6
+                h4.list-title.line-header
+                  span= __('about_us')
+                p= __('about_us_info')
 
 
     script(type='text/javascript', src=links.assets.js.main())

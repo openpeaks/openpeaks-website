@@ -3,5 +3,8 @@ extends layouts/main
 block main_content
   article
     header
-      h1= article.title
+      h1(itemprop="headline")= article.title
     div!=articleText.text
+
+block scripts
+  +articleJsonLd(article, articleText)
