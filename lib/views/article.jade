@@ -1,10 +1,13 @@
 extends layouts/main
 
+block metas
+  +articleMetas(article, articleText)
+
 block main_content
   article
     header
       h1(itemprop="headline")= article.title
     div!=articleText.text
 
-block scripts
-  +articleJsonLd(article, articleText)
+//- block scripts
+//-   +articleJsonLd(article, articleText)
