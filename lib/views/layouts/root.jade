@@ -24,7 +24,7 @@ html(lang=lang)
         #page-header.clearfix
           .row
             .col-xs-5.col-sm-4.col-md-2
-              a#page-logo(href=links.home({lang: lang}), title=project.name) Open
+              a#page-logo(href=links.home({lang: lang}), title=config.name) Open
                 strong peaks
             .col-xs-5.col-sm-8.col-md-7
               ul#page-menu
@@ -41,7 +41,7 @@ html(lang=lang)
                 h4.list-title.line-header
                   span= __('project_languages')
                 ul.list-items
-                  each item in project.languages
+                  each item in languages
                     li(class=(lang===item.alpha2?'active':null))
                       a(href=links.home({lang: item.alpha2}))= item.name
                   li
@@ -52,9 +52,10 @@ html(lang=lang)
                   span= __('about_us')
                 p= __('about_us_info')
 
-    if (actionUrl)
-      script.
-        (function(){var img = new Image();img.src = '#{actionUrl}';})();
+    //- if (actionUrl)
+    //-   script.
+    //-     (function(){(new Image()).src = '#{actionUrl}';})();
+
     block scripts
     script.
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

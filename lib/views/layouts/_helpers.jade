@@ -16,3 +16,9 @@ mixin articleJsonLd(article, articleText)
       "dateModified": "#{articleText.updatedAt.toISOString()}",
       "description": "#{article.headline}"
     }
+
+mixin shareButtonsLarge()
+  ul.share-butons.view-large
+    each item in shareButtons
+      li
+        a(class='share-'+item.id, target='_blank', href="#{item.url.replace('%URL',site.head.canonical)}")= util.format(__('share_on_format'), item.name)

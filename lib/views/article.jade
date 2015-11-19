@@ -6,9 +6,12 @@ block metas
 block main_content
   article
     header
-      h1(itemprop="headline")= article.title
+      h1= article.title
+    br
     div!=articleText.text
+  .addthis_sharing_toolbox
 
 block scripts
   //- +articleJsonLd(article, articleText)
   script(type='text/javascript', src=links.assets.js.main())
+  script(type='text/javascript', src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-564dbfac55cad4d3', async='async')
