@@ -52,9 +52,9 @@ html(lang=lang)
                   span= __('about_us')
                 p= __('about_us_info')
 
-    //- if (actionUrl)
-    //-   script.
-    //-     (function(){(new Image()).src = '#{actionUrl}';})();
+    if (actionUrl)
+      script.
+        (function(){(new Image()).src = '#{actionUrl}';})();
 
     block scripts
     script.
