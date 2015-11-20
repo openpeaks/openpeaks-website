@@ -7,7 +7,12 @@ block main_content
   article
     header
       h1= article.title
-    br
+      ul.al-stats.stats-main
+        li.al-date= articleText.updatedAt.toLocaleDateString('ro')
+        each item in article.categories
+          li.al-category
+            a(href=links.category(item.id, {lang: lang}))= item.name
+        li.al-views= article.countViews
     div!=articleText.text
   br
   br
@@ -16,3 +21,4 @@ block scripts
   //- +articleJsonLd(article, articleText)
   script(type='text/javascript', src=links.assets.js.main())
   script(type='text/javascript', src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-564dbfac55cad4d3', async='async')
+

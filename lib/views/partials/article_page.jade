@@ -1,5 +1,3 @@
-extends layouts/wide
-
 block metas
   +articleMetas(article, articleText)
 
@@ -7,11 +5,7 @@ block main_content
   article
     header
       h1= article.title
-      ul.al-stats.stats-main
-        li.al-date= articleText.updatedAt.toLocaleDateString('ro')
-        each item in article.categories
-          li.al-category
-            a(href=links.category(item.id, {lang: lang}))= item.name
+      ul.al-stats
         li.al-views= article.countViews
     div!=articleText.text
   br
