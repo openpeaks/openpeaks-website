@@ -11,13 +11,13 @@ block content
     aside.col-xs-12.col-sm-4
       block aside_content_top
       section.tab
-        h3.tab-title= __('popular')
-        .tab-content
-          +articleListSmall(popularArticles)
-      section.tab
         h3.tab-title= __('latest_tops')
         .tab-content
           +articleListSmall(latestTops)
+      section.tab
+        h3.tab-title= __('popular')
+        .tab-content
+          +articleListSmall(popularArticles)
 
       //- section.tab
       //-   h3.tab-title= __('stats')

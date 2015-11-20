@@ -11,12 +11,4 @@ block main_content
   h2#content-title.line-header
     span= __('latest_articles')
 
-  +articleListMain(valueArticles)
-
-
-block aside_content_top
-  if (topArticles && topArticles.length>0)
-    .tab
-      h3.tab-title= __('top_articles')
-      .tab-content
-        +articleListSmall(topArticles)
+  +articleListMain(topicArticles)
