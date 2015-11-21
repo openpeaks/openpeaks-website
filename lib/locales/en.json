@@ -8,6 +8,7 @@
 	"latest_tops": "New tops",
 	"project_languages": "Languages",
 	"add_your_language": "Add your language",
-  "about_us": "About us",
-  "about_us_info": "We write articles with interesting statistics."
+	"about_us": "About us",
+	"about_us_info": "We write articles with interesting statistics.",
+	"article_update_info": "The article regenerates when there are new statistics."
 }
